@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import IndividualMovie from './movies/IndividualMovie';
+import { movieDTO } from './movies/movies.model';
 function App() {
+  const testMovie:movieDTO={
+    id:1,
+    title:'Spider-Man: Far From Home',
+    poster: 'https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <>
+<IndividualMovie  {...testMovie}/>
+  </>
+  )
 }
 
 export default App;
